@@ -17,7 +17,8 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: |
-          pip install markdownlint-cli==0.35.0 codespell
+          npm install -g markdownlint-cli@0.35.0
+          pip install codespell
       - name: Lint markdown
         run: markdownlint "**/*.md"
       - name: Spell check
